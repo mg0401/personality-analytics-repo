@@ -57,6 +57,13 @@
 			<artifactId>jettison</artifactId>
 			<version>1.1</version>
 		</dependency>
+		
+		<!-- RestFB -->
+		<dependency>
+			<groupId>com.restfb</groupId>
+			<artifactId>restfb</artifactId>
+			<version>1.18.1</version>
+		</dependency>
 
 	</dependencies>
 
