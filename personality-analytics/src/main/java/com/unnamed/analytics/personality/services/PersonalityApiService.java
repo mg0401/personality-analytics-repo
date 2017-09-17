@@ -4,5 +4,5 @@ import org.codehaus.jettison.json.JSONObject;
 
 public interface PersonalityApiService {
 
-	public JSONObject userPersonalityResult(String fbAccessToken);
+	public String userPersonalityResult(String fbAccessToken) throws Exception;
 }

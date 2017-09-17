@@ -25,11 +25,11 @@ public class FacebookDataReader {
 	public String postsReader() {
 		
 		StringBuffer fbDataBuffer = new StringBuffer();
-		Date oneWeekAgo = new Date(currentTimeMillis() - 1000L * 60L * 60L * 24L * 6000L);
-		System.out.println(" Data: " +oneWeekAgo);
+		Date sinceValue = new Date(currentTimeMillis() - 1000L * 60L * 60L * 24L * 6000L);
+		System.out.println(" Date: " +sinceValue);
 		
 		System.out.println("**** Posts Test  ****");
-		Connection<Post> myFeed = facebookClient23.fetchConnection("me/feed",Post.class, Parameter.with("Until", oneWeekAgo));
+		Connection<Post> myFeed = facebookClient23.fetchConnection("me/feed",Post.class, Parameter.with("since", sinceValue));
 
 		for (List<Post> myFeedConnectionPage : myFeed)
 			for (Post post : myFeedConnectionPage) {
